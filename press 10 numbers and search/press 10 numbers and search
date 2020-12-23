@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+	int i,j=0,z;
+	double nums[10],search;
+	printf("press 10 nums\n");
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d. ", i + 1);
+		scanf_s("%lf", &nums[i]);
+	}
+	printf("press a number to search:");
+	scanf_s("%lf", &search);
+	for (i = 0; i < 10; i++)
+	{
+		if(search==nums[i])
+		{
+			j++;
+			printf("found %2lf at %d\n", search, i+1);
+		}
+	}
+	if(j==0)
+	{
+		printf("not found\n");
+	}
+	system("pause");
+	return 0;
+}
